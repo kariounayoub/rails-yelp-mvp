@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+  <br>
+  <h2>Reviews</h2>
+  <ul class="list-unstyled">
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content %></li>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to "BACK", restaurants_path , class: 'btn btn-warning'%>
+</div>
